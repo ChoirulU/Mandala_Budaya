@@ -1,0 +1,421 @@
+.container {
+    display: grid;
+    grid-template-areas:
+        "navbar navbar"
+        "sidebar konten"
+        "footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+.navbar {
+    grid-area: navbar;
+    background: linear-gradient(90deg, #8B0000, #B22222);
+    color: white;
+    padding: 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 60px;
+    height: 60px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    position: absolute;
+    left: 15%;
+    transform: translateX(-50%);
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navLinks li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+    color: #ffeb3b;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
+
+.konten {
+    grid-area: konten;
+    background-color: #F5F5DC;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.konten img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10%;
+}
+
+.konten p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+    max-width: 950px;
+    padding: 0 10px;
+    margin-top: -5%;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #B22222;
+    padding: 10px;
+    color: white;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #ffeb3b;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-areas:
+            "navbar"
+            "konten"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: rgba(178, 34, 34, 0.95);
+        padding-top: 60px;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+        z-index: 1000;
+    }
+
+    .navLinks li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .showMenu {
+        transform: translateX(0);
+    }
+
+    .footer {
+        padding: 5px;
+        height: 30px;
+    }
+}
+
+/*CONTAINER*/
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.mainContent {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.mainContent>div:first-child {
+    flex: 0 0 250px;
+    height: 100%;
+}
+
+.contentArea {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container--small {
+    max-width: 100%;
+    border: 2px solid #3498db;
+}
+
+.container--medium {
+    max-width: 100%;
+    border: 4px solid #2ecc71;
+}
+
+.container--big {
+    max-width: 100%;
+    border: 6px solid #e74c3c;
+}
+
+/*Card*/
+.cardContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+/*Button*/
+.ButtonContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.alatbutton {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.alatbutton h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.alatbutton p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Pantai Boom buttons */
+.pantaiInfoButton {
+    background-color: #92ceff;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 0;
+    /* Bentuk persegi panjang */
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: 2px solid #000;
+    transition: transform 0.3s ease;
+}
+
+.pantaiInfoButton:hover {
+    transform: scale(1.1); /* Memperbesar saat hover */
+}
+
+.pantaiReadMoreButton {
+    background-color: #4682b4;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 0;
+    /* Bentuk persegi panjang */
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: 2px solid #000;
+    transition: transform 0.3s ease;
+}
+
+.pantaiReadMoreButton:hover {
+    transform: scale(1.1);
+}
+
+/* Kawah Ijen buttons */
+.kawahInfoButton {
+    background-color: #f0e68c;
+    color: #333;
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    /* Bentuk persegi panjang dengan radius */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    font-size: 0.8rem;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.kawahInfoButton:hover {
+    background-color: #ffd700;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.kawahReadMoreButton {
+    background-color: #daa520;
+    color: white;
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    /* Bentuk persegi panjang dengan radius */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    font-size: 0.8rem;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.kawahReadMoreButton:hover {
+    background-color: #b8860b;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Air Terjun Jagir buttons */
+.airTerjunInfoButton {
+    background-color: #98fb98;
+    color: #333;
+    width: 70%;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 50px;
+    /* Bentuk elips */
+    cursor: pointer;
+    font-size: 1rem;
+    border: 2px solid #000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.airTerjunInfoButton:hover {
+    background-color: #90ee90;
+    transform: translateY(-3px);
+    /* Tombol naik saat hover */
+}
+
+.airTerjunReadMoreButton {
+    background-color: #228b22;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 50px;
+    /* Bentuk elips */
+    cursor: pointer;
+    font-size: 1rem;
+    border: 2px solid #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Shadow lembut */
+    transition: background-color 0.3s ease;
+}
+
+.airTerjunReadMoreButton:hover {
+    background-color: #006400;
+    transform: translateY(-3px);
+}
+/*sejarah*/
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.paragraph {
+    text-align: justify;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0 15px 20px;
+}
+
+/* Container untuk Menampung Card */
+.contentWrapper {
+        border-radius: 10px;
+        width: 100%;
+        padding: 20px;
+        transition: transform 0.3s ease;
+        display: grid;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* Gaya untuk Judul Form */
+.formTitle {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}

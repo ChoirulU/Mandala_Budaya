@@ -1,0 +1,84 @@
+/*table.module.js*/
+.title {
+    background-color: #dddee0;
+}
+
+.tableContainer {
+    background-color: #f5f5dc;
+    display: flex;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 16px;
+    color: #333;
+    align-items: flex-start;
+}
+
+
+.tableImage {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.tableImage img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.tableText {
+    flex-grow: 0;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    color: #4A4A4A;
+}
+
+.expandedText {
+    display: none;
+    margin-top: 10px;
+    transition: max-height 0.3s ease-out;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.tableText .expandedText {
+    display: block;
+    transition: max-height 0.3s ease-in;
+}
+
+.dropdownButton {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdownButton:hover {
+    background-color: #45a049;
+}
+
+.customTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+}
+
+.customTable th,
+.customTable td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #000;
+}
+
+.customTable th {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #000;
+}

@@ -1,0 +1,257 @@
+/* Gaya Umum untuk Semua Form */
+.formContainer {
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 0 1 calc(48% - 30px);
+    box-sizing: border-box;
+}
+
+/* Form untuk Pantai Boom */
+.fom--pantaiBoom {
+    background-color: #e0f7fa;
+    border: 2px solid #00838f;
+    transition: transform 0.3s;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.fom--pantaiBoom:hover {
+    transform: scale(1.05);
+}
+
+.fom--pantaiBoom .submitButton {
+    background-color: #00796b;
+}
+
+/* Form untuk Kawah Ijen */
+.fom--kawahIjen {
+    background-color: #d1c4e9;
+    border: 2px solid #512da8;
+    border-radius: 12px;
+    max-width: 600px;
+    padding: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    margin: 15px auto;
+    position: relative;
+    height: 400px;
+    min-height: 400px;
+}
+
+.fom--kawahIjen .formGroup {
+    margin-bottom: 20px;
+    width: 90%; 
+}
+
+.fom--kawahIjen label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #512da8;
+}
+
+.fom--kawahIjen input {
+    padding: 12px;
+    border: 1px solid #b39ddb;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fom--kawahIjen input:focus {
+    border-color: #673ab7;
+    box-shadow: 0 0 6px rgba(103, 58, 183, 0.4);
+}
+
+.fom--kawahIjen .submitButton {
+    background-color: #673ab7;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 50%;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(103, 58, 183, 0.4);
+}
+
+.fom--kawahIjen .submitButton:hover {
+    background-color: #5e35b1;
+}
+
+/* Form untuk Air Terjun Jagir dengan gambar online */
+.fom--airTerjunJagir {
+    background-image: url("https://yourtrip.id/wp-content/uploads/2023/12/Air-Terjun-Jagir.jpeg");
+    /* Ganti URL ini dengan link gambar online */
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #388e3c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+.fom--airTerjunJagir .formTitle {
+    font-size: 32px;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Gaya untuk Form Groups */
+.fom--airTerjunJagir .formGroup {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Gaya untuk Label */
+.fom--airTerjunJagir label {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: bold;
+    display: block;
+}
+
+/* Gaya untuk Input Fields */
+.fom--airTerjunJagir input {
+    padding: 12px;
+    border: 2px solid #4caf50;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 16px;
+}
+
+.fom--airTerjunJagir input:focus {
+    border-color: #ffeb3b;
+    box-shadow: 0 0 6px rgba(255, 235, 59, 0.6);
+}
+
+/* Gaya untuk Tombol Kirim */
+.fom--airTerjunJagir .submitButton {
+    background-color: #4caf50;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.fom--airTerjunJagir .submitButton:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive untuk Mobile */
+@media (max-width: 768px) {
+    .fom--airTerjunJagir {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .fom--airTerjunJagir .formTitle {
+        font-size: 28px;
+    }
+
+    .fom--airTerjunJagir input {
+        font-size: 14px;
+    }
+
+    .fom--airTerjunJagir .submitButton {
+        font-size: 16px;
+    }
+}
+
+/* Form untuk Teluk Ijo */
+.fom--telukIjo {
+    background-color: #ffe0b2;
+    border: 2px dashed #ff9800;
+    padding: 30px;
+    width: 300%;
+    height: 200px;
+    min-height: 350px;
+    margin: 0 auto;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+.fom--telukIjo .formGroup {
+    margin-bottom: 20px;
+    width: 90%;
+    /* Sesuaikan lebar input */
+    text-align: center;
+}
+
+.fom--telukIjo label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ff9800;
+    display: block;
+}
+
+.fom--telukIjo input {
+    padding: 12px;
+    border: 1px solid #b39ddb;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.fom--telukIjo input:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 6px rgba(255, 152, 0, 0.4);
+}
+
+.fom--telukIjo .submitButton {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 50%;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(255, 87, 34, 0.4);
+}
+
+.fom--telukIjo .submitButton:hover {
+    background-color: #e64a19;
+}
